@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block tituloPagina %}Default title{% endblock %}</title>
+        <link rel="stylesheet" href="/styles/styles.css"/>
+    </head>
+
+    <body>
+        
+        <header>
+
+        {% block inicioPortada %}
+            </header>
+            
+            <header id = "cabecera">
+            <div id = "cabecera-background"></div>
+
+        {% endblock %}
+
+            <div id = "menu">
+
+                <img src = "/imgs/tri.png" id="logo"/>
+
+                <div id= "empresa">
+                    <h1>INFINITY</h1>
+                    <p>TURISMO ASTRONÓMICO</p>
+                </div>
+
+                <div id = "opciones">
+                    <a href="#" class = "opcion">INICIO</a>
+                    <a href="#presentacion" class = "opcion">¿QUIENES SOMOS?</a>
+                    <a href="#titulo-eventos" class = "opcion">EVENTOS</a>
+                    <a href="#contacto" class = "opcion">CONTACTO</a>
+                </div>
+
+            </div>
+
+            {% block portada %}
+
+            <p> Default stuff in header </p>
+
+            {% endblock %}
+
+        </header>
+
+        {% block subcabecera %}
+
+        <p> Default stuff in subheader </p>
+
+        {% endblock %}
+
+        <section>
+            {% block tituloSeccion %}
+            
+            <p> Default stuff in section title </p>
+
+            {% endblock %}
+        </section>
+
+        <aside>
+
+            <strong>
+
+                {% block tituloAuxiliar %} DEFAULT TITLE {% endblock %}
+
+            </strong>
+
+            <ul>
+                {% block contenidoAuxiliar %}
+
+                <li><a href="https://www.nowhere.com">LINK</a></li>
+                <li><a href="https://www.nowhere.com">EXAMPLES</a></li>
+
+                {% endblock %}
+            </ul>
+        </aside>
+
+        <section>
+            {% block seccionPrincipal %}
+            
+            <p> Default stuff in main section </p>
+
+            {% endblock %}
+        </section>
+
+        <footer id="contacto">
+           <h2>CONTACTO</h2>
+           <p>Teléfono de atención al cliente: +34 857349865</p>
+           <p>Correo de contacto: jasansu@correo.ugr.es</p>
+           <hr/>
+            &copy 2021 JOSÉ ANTONIO SÁNCHEZ SUÁREZ
+        </footer>
+    </body>
+</html>
